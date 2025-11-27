@@ -1,0 +1,160 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.codeeditorcontainer{
+    width: 100%;
+    height: 70%;
+    background-color: rgb(12, 17, 20);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    overflow: auto;
+}
+.codeeditor{
+    width: 380px;
+    height: 400px;
+     background-color: rgb(12, 17, 20);
+     box-shadow: 2px 2px 10px black;
+     border: 2px solid rgb(255, 255, 255,0.125);
+     border-radius: 20px;
+     overflow: auto;
+     position: relative;
+}
+.head{
+    width: 100%;
+    height: 60px;
+    border: 2px solid rgb(255, 255, 255,0.125);
+     box-shadow: 2px 4px 10px black;
+border-radius: 0px 0px 10px 10px;
+padding: 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.left span{
+    color: white;
+    font-size: 20px;
+   
+}
+img{
+    border-radius: 50%;
+}
+.left{
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.right{
+    color: white;
+    font-size: 23px;
+}
+.right:hover{
+    scale: 120%;
+    cursor: pointer;
+}
+.codeeditor textarea{
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: rgb(12, 17, 20);
+    border: none;
+    position: absolute;
+    bottom: 0;
+    outline: none;
+    color: white;
+    padding: 10px;
+    resize: none;
+    overflow-y: scroll; 
+    font-size: 20px;
+}
+
+
+.codeeditor textarea::-webkit-scrollbar {
+    display: none;   
+}
+
+
+.codeeditor textarea {
+    scrollbar-width: none;
+}
+.outputcontainer{
+    width: 100%;
+    height: 30%;
+    box-shadow: 2px -4px 10px rgb(36,71, 72);
+    z-index: 1;
+  
+   
+}
+
+.output span{
+    color: white;
+    font-size: 20px;
+    
+}
+.opticon{
+   display: flex;
+    gap: 10%;
+}
+.output{
+width: 100%;
+height: 60px;
+ background-color: rgb(12, 17, 20);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 10px;
+ padding: 20px;
+}
+#outputframe{
+    width: 100%;
+    height: calc(100% - 60px);
+    overflow: auto;
+}
+.opt1:hover{
+    scale: 120%;
+    cursor: pointer;
+}
+.opt2:hover{
+    scale: 120%;
+    cursor: pointer;
+}
+
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1; /* this makes Codeeditor take remaining space */
+}
+.codeeditor-container {
+  position: relative;
+  width: 100%;
+  height: 500px; /* or any height you want */
+  margin: 20px 0;
+}
+.codeeditor iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.codeeditor iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
