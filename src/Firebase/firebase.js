@@ -11,21 +11,21 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firebase Authentication and get a reference to the service
+
 export const auth = getAuth(app);
 
-// Google Auth Provider
+
 export const googleProvider = new GoogleAuthProvider();
 
-// Configure Google provider
+
 googleProvider.setCustomParameters({
   prompt: "select_account"
 });
 
-// Sign in with Google function
+
 export const signInWithGoogle = async () => {
   try {
     const result = await signInWithPopup(auth, googleProvider);
@@ -36,7 +36,7 @@ export const signInWithGoogle = async () => {
   }
 };
 
-// Sign out function
+
 export const signOutUser = async () => {
   try {
     await signOut(auth);
